@@ -2,7 +2,7 @@ import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { moderateScale } from 'react-native-size-matters';
 
-import { ReadQR, ListQR } from '../screens';
+import { ReadQR, ListQR } from '@screens';
 
 import { BottomTabParamList } from './types';
 import QR from './svg/QR';

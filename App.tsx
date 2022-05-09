@@ -1,8 +1,8 @@
-import { Navigation } from './src/navigation';
 import { StatusBar } from 'expo-status-bar';
 import { Provider } from 'react-redux';
 
-import store from './src/redux/store';
+import { Navigation } from '@navigation';
+import store from '@reduxStore';
 
 const App = () => {
   return (

@@ -2,8 +2,8 @@ import React from 'react';
 import { Text, StyleSheet, TouchableOpacity, View } from 'react-native';
 import { BarCodeScanner } from 'expo-barcode-scanner';
 
-import { SafeArea } from '../../components';
-import { useReadQR } from '../../hooks/useReadQR';
+import { SafeArea } from '@components';
+import { useReadQR } from '@useReadQR';
 
 import { styles } from './styles';
 

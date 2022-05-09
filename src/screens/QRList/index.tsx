@@ -2,12 +2,12 @@ import { Text, View, FlatList, TouchableOpacity } from 'react-native';
 import { TextInput } from 'react-native-gesture-handler';
 import { moderateScale } from 'react-native-size-matters';
 
-import { SafeArea } from '../../components/SafeArea';
-import ScanQRSVG from '../../../assets/qr-code-svgrepo-com.svg';
-import WarningSVG from '../../../assets/warning-svgrepo-com.svg';
-import DeleteSVG from '../../../assets/delete.svg';
-import { useListQR } from '../../hooks/useListQR';
-import { deleteQR } from '../../redux/actions/qr';
+import { SafeArea } from '@components';
+import ScanQRSVG from '@assets/qr-code-svgrepo-com.svg';
+import WarningSVG from '@assets/warning-svgrepo-com.svg';
+import DeleteSVG from '@assets/delete.svg';
+import { useListQR } from '@useListQR';
+import { deleteQR } from '@reduxAction';
 import { Props } from './interfaces';
 
 import { styles } from './styles';

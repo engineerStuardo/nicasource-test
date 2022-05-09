@@ -3,7 +3,7 @@ import { BarCodeScanner } from 'expo-barcode-scanner';
 import { useDispatch } from 'react-redux';
 import { useFocusEffect } from '@react-navigation/native';
 
-import { addQR } from '../redux/actions/qr';
+import { addQR } from '@reduxAction';
 
 export const useReadQR = () => {
   const [hasPermission, setHasPermission] = useState(false);

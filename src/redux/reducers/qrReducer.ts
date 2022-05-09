@@ -1,12 +1,12 @@
-import { ADD_QR, DELETE_QR, SEARCH_QR } from '../actions/action-types';
+import { ADD_QR, DELETE_QR } from '../actions/action-types';
 
 interface Action {
-  type: 'ADD_QR' | 'DELETE_QR' | 'SEARCH_QR';
+  type: 'ADD_QR' | 'DELETE_QR';
   data: string | number;
 }
 
 const initialState = {
-  qrList: [],
+  QRData: [],
 };
 
 const qrReducer = (state = initialState, action: Action) => {
@@ -14,20 +14,16 @@ const qrReducer = (state = initialState, action: Action) => {
     case ADD_QR:
       return {
         ...state,
-        qrList: state.qrList.concat({ key: Math.random(), qr: action.data }),
+        QRData: state.QRData.concat({
+          key: Math.random(),
+          qr: action.data.toString(),
+        }),
       };
     case DELETE_QR:
       return {
         ...state,
-        qrList: state.qrList.filter(
+        QRData: state.QRData.filter(
           (item: { key: number }) => item.key !== action.data
-        ),
-      };
-    case SEARCH_QR:
-      return {
-        ...state,
-        qrList: state.qrList.filter((item: { qr: string }) =>
-          item.qr.includes(action.data.toString())
         ),
       };
     default:
